@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template using grid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            /* background-color: gray; */
+        }
+
+        body {
+            background-color: rgb(58, 56, 56);
+        }
+
+        .top {
+            /* border: 2px solid maroon; */
+            display: grid;
+            grid-template-areas: 'rig rig cen cen lef lef';
+            height: 60px;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .ryt {
+            /* border: 2px solid darkblue; */
+            grid-area: rig;
+
+        }
+
+        .ryt:hover {
+            background-color: rgb(255, 191, 135);
+            transition: 1s;
+
+        }
+
+        .ryt img:hover {
+            cursor: pointer;
+
+        }
+
+        .mid {
+            /* border: 2px solid darkblue; */
+            grid-area: cen;
+
+
+        }
+
+        .mid>a {
+            text-decoration: none;
+            color: black;
+            /* border: 1px solid maroon; */
+            border-radius: 20px;
+            /* line-height: 25px; */
+            background-color: rgb(255, 191, 135);
+            font-size: 20px;
+            padding: 6px;
+        }
+
+        .mid a:hover {
+            background-color: darkgoldenrod;
+            transition: 1s;
+            font-size: 25px;
+        }
+
+        .left {
+            /* border: 2px solid darkblue; */
+            grid-area: lef;
+
+        }
+
+        .left:hover {
+            cursor: pointer;
+            background-color: rgb(255, 191, 135);
+            color: rgb(112, 86, 21);
+            font-size: 20px;
+            transition: 1s;
+        }
+
+        .img {
+            /* border: 2px solid maroon; */
+            /* background: url(https://p.w3layouts.com/demos/movie_store/web/images/banner.jpg);
+    background-repeat: no-repeat; */
+            height: 460px;
+        }
+
+        /* .num{
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas:'aa aa bb bb cc cc dd' ;
+   
+ 
+   text-align: center;
+}
+.a{
+    border: 1px solid black;
+grid-area: aa;
+}
+.b{
+    border: 1px solid black;
+    grid-area: bb;
+}
+.c{
+    border: 1px solid black;
+    grid-area: cc;
+}
+.d{
+    border: 1px solid black;
+    grid-area: dd;
+    display: grid;
+    grid-template-areas: 'ee ff gg';
+}
+.e{
+grid-area: ee;
+border: 1px solid darkviolet;
+}.f{
+grid-area: ff;
+border: 1px solid darkviolet;
+}
+.g{
+grid-area: gg;
+border: 1px solid darkviolet;
+} */
+        .head {
+            color: rgb(80, 79, 79);
+            font-family: sans-serif;
+            /* border: 1px solid yellow; */
+
+
+        }
+
+        .box {
+            /* border: 2px solid maroon; */
+            display: grid;
+            grid-template-areas: 'on on tw tw th th fo fo fi fi'
+                'si si se se ei ei ei ei ni ni'
+                'te te te te el el tl tl tt tt ';
+            text-align: center;
+            line-height: 100px;
+            /* width: 100%; */
+        }
+
+        .box:hover {
+            cursor: pointer;
+        }
+
+        .one {
+            /* border: 1px solid black; */
+            grid-area: on;
+            padding-top: 20px;
+
+        }
+
+        .two {
+            border: 1px solid black;
+            grid-area: tw;
+            line-height: 200px;
+
+
+        }
+
+        .three {
+            /* border: 1px solid black; */
+            grid-area: th;
+            padding-top: 20px;
+        }
+
+        .four {
+            /* border: 1px solid black; */
+            grid-area: fo;
+            padding-top: 20px;
+        }
+
+        .five {
+            /* border: 1px solid black; */
+            grid-area: fi;
+            padding-top: 20px;
+
+        }
+
+        .six {
+            /* border: 1px solid black; */
+            grid-area: si;
+            padding-top: 20px;
+
+        }
+
+        .seven {
+            /* border: 1px solid black; */
+            grid-area: se;
+            padding-top: 20px;
+        }
+
+        .eight {
+            /* border: 1px solid black; */
+            grid-area: ei;
+            padding-top: 20px;
+        }
+
+        .nine {
+            border: 1px solid black;
+            grid-area: ni;
+            line-height: 200px;
+        }
+
+        .ten {
+            /* border: 1px solid black; */
+            grid-area: te;
+            padding-top: 20px;
+        }
+
+        .eleven {
+            border: 1px solid black;
+            grid-area: el;
+            line-height: 200px;
+        }
+
+        .twelve {
+            /* border: 1px solid black; */
+            grid-area: tl;
+            padding-top: 20px;
+        }
+
+        .thirteen {
+            /* border: 1px solid black; */
+            grid-area: tt;
+            padding-top: 20px;
+        }
+
+
+        .end {
+            display: grid;
+            grid-template-areas: "herr mee";
+            /* border: 2px solid black; */
+            background-color: rgb(131, 8, 8);
+            /* width: 100%; */
+            padding-top: 20px;
+            text-align: center;
+
+
+
+        }
+
+        .her {
+            grid-area: herr;
+            /* border: 1px solid  green; */
+            width: 315px;
+            padding: 20px;
+            /* font-size: 18px; */
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+        .me {
+            display: grid;
+            grid-template-areas: 'hee shee theyy';
+            grid-area: mee;
+            background-color: gray;
+            /* border: 1px solid black; */
+            margin-top: 10px;
+
+        }
+
+        .me:hover {
+            cursor: pointer;
+        }
+
+        .me div>ul {
+            list-style: none;
+        }
+
+        .he {
+            grid-area: hee;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .she {
+            grid-area: shee;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .they {
+            grid-area: theyy;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .btn {
+            color: green;
+            background-color: gray;
+        }
+
+        .btn:hover {
+            color: red;
+
+        }
+
+        .body {
+            background-color: rgb(209, 209, 207);
+            border: 2px solid maroon;
+            width: 930px;
+            margin-left: 200px;
+            margin-right: 150px;
+            margin-top: 90px;
+            margin-bottom: 90px;
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="top">
+            <div class="ryt"><img src="https://p.w3layouts.com/demos/movie_store/web/images/logo.png" alt=""></div>
+            <div class="mid">
+                <a href="http://facebook.com">F</a>
+                <a href="http://google.com">G</a>
+                <a href="http://instagram.com">I</a>
+                <a href="http://linkedin.com">L</a>
+                <a href="http://twitter.com">T</a>
+            </div>
+            <div class="left">
+                <h3>CAROL VAROIS</h3>
+            </div>
+        </div>
+        <div class="img"><img src="https://p.w3layouts.com/demos/movie_store/web/images/banner.jpg" alt="" width="100%"
+                height="460px">
+            <!-- <div class="num">
+<div class="a">1</div>
+<div class="b">2</div>
+<div class="c">3</div>
+<div class="d">
+    <div class="e">4</div>
+    <div class="f">5</div>
+    <div class="g">6</div>
+</div>
+</div> -->
+        </div>
+        <div class="head">
+            <h2>FEATURED IMAGES</h2>
+
+            <div class="box">
+                <div class="one"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic1.jpg" alt=""
+                        width="150px" height="150px"></div>
+                <div class="two">HELLO</div>
+                <div class="three"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic6.jpg" alt=""
+                        width="150px" height="150px"></div>
+                <div class="four"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic7.jpg" alt=""
+                        width="150px" height="150px"></div>
+                <div class="five"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic9.jpg" alt=""
+                        width="150px" height="150px"></div>
+                <div class="six"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic2.jpg" alt=""
+                        width="150px" height="150px"></div>
+                <div class="seven"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic3.jpg" alt=""
+                        width="150px" height="160px"></div>
+                <div class="eight">
+                    <iframe width="300" height="150" src="https://www.youtube.com/embed/s1QeoSedWmM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="nine">HELLO</div>
+                <div class="ten"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic4.jpg" alt=""
+                        width="300px" height="150px"></div>
+                <div class="eleven">HELLO</div>
+                <div class="twelve"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic8.jpg" alt=""
+                        width="150px" height="150px"></div>
+                <div class="thirteen"><img src="https://p.w3layouts.com/demos/movie_store/web/images/pic10.jpg" alt=""
+                        width="150px" height="170px"></div>
+            </div>
+        </div><br>
+
+        <div class="end">
+            <div class="her"> <img src="https://p.w3layouts.com/demos/movie_store/web/images/logo.png" alt=""><br><br>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page.<br>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+            </div>
+            <div class="me">
+                <div class="he">
+                    <ul>
+                        <h4>CATEGORIES</h4><br>
+                        <li>Dance</li><br>
+                        <li>History</li><br>
+                        <li>Specials</li>
+                    </ul>
+                </div>
+                <div class="she">
+                    <ul>
+                        <h4>INFORMATION</h4><br>
+                        <li>New Products</li><br>
+                        <li>Top Sellers</li><br>
+                        <li>Specials</li>
+                    </ul>
+                </div>
+                <div class="they">
+                    <ul>
+                        <h4>FOLLOW US</h4><br>
+                        <li>Faceook</li><br>
+                        <li>Twitter</li><br>
+                        <li>YouTube</li><br>
+                    </ul>&copy;2015 Movie_store. All Rights Reserved | Template by <mark class="btn">w3layouts</mark>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
